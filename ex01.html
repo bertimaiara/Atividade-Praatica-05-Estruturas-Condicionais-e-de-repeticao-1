@@ -4,15 +4,33 @@ mostre quantos alunos existem na turma e qual é a média de idade
 do grupo. -->
 <!DOCTYPE html>
 <html lang="pt">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercício 01</title>
-</head>
-<body>
-    <script>
-        
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exercício 01</title>
+    </head>
+    <body>
+        <script>
+        let totalIdade = 0, numAlunos = 0;
+
+        while (true) {
+            idade = parseInt(prompt("Digite a idade do aluno (ou 999 para encerrar):"));
+            
+            if (idade === 999) {
+                break;
+            }
+
+            totalIdade = totalIdade + idade;
+            numAlunos++;
+        }
+
+            if (numAlunos > 0) {
+                const mediaIdade = totalIdade / numAlunos;
+                document.write(`A turma possui ${numAlunos} alunos, com média de idade de ${mediaIdade.toFixed(2)} anos.<br>`);
+            } else {
+                document.write("Não foram informadas as idades dos alunos.");
+            }
     </script>
-</body>
+    </body>
 </html>

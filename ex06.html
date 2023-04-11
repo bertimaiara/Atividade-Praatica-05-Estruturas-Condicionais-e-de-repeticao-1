@@ -15,7 +15,19 @@ Acima de 500m2 = TERRENO VIP -->
 </head>
 <body>
     <script>
-        
+        let largura = parseFloat(prompt("Qual a largura do terreno?"));
+        let comprimento = parseFloat(prompt("Qual a comprimento do terreno?"));
+        let resultado = largura * comprimento;
+
+        if (resultado <= 100) {
+            document.write(`A área total do terreno é de ${resultado.toFixed(2)} m². Sendo um terreno popular.`);
+        } else if (resultado <=500) {
+            document.write(`A área total do terreno é de ${resultado.toFixed(2)} m². Sendo um terreno master.`);
+        } else {
+            document.write(`A área total do terreno é de ${resultado.toFixed(2)} m². Sendo um terreno vip.`);
+        }
+
+        document.write(`O valor da passagem é de R$ ${precoPassagem.toFixed(2)}.`);
     </script>
 </body>
 </html>

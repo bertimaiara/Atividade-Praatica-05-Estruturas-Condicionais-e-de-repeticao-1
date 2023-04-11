@@ -14,7 +14,17 @@ b. Mulheres ganham 13% de desconto -->
 </head>
 <body>
     <script>
-        
+        const nome = parseFloat(prompt("Digite o seu nome"));
+        const sexo = prompt("Digite o seu sexo (M/F)");
+        let valorCompra = parseFloat(prompt("Digite o valor da compra"))
+
+        if (sexo.toUpperCase() === "M") {
+            desconto = (valorCompra * 5) / 100;
+        } else if (sexo.toUpperCase() === "F") {
+            desconto = (valorCompra * 13) / 100;
+        }
+
+        document.write(`O valor de desconto é de R$ ${desconto.toFixed(2)}.`);
     </script>
 </body>
 </html>

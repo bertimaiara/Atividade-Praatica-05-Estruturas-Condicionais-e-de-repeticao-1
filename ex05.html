@@ -12,7 +12,16 @@ longas. -->
 </head>
 <body>
     <script>
-        
+        const distancia = parseFloat(prompt("Qual a distância da viagem?"));
+        const viagem = 0;
+
+        if (distancia <= 200) {
+            precoPassagem = distancia * 0.50;
+        } else {
+            precoPassagem = distancia * 0.45;
+        }
+
+        document.write(`O valor da passagem é de R$ ${precoPassagem.toFixed(2)}.`);
     </script>
 </body>
 </html>

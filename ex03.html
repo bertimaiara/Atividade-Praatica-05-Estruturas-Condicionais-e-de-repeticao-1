@@ -15,7 +15,17 @@ Contagem: 3 5 7 9 Acabou! -->
 </head>
 <body>
     <script>
-        
+        let primeiroValor = parseInt(prompt("Digite o primeiro valor"));
+        let ultimoValor = parseInt(prompt("Digite o último valor"));
+        let incremento = parseInt(prompt("Digite o incremento"));
+
+        document.write("Contagem: ")
+
+        for (let i = primeiroValor; i < ultimoValor; i += incremento) {
+            document.write(i + ", ");
+        }
+
+        document.write(" Acabou!");
     </script>
 </body>
 </html>
